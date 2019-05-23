@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="k-canvas" width="200" height="200" style="border: 1px solid #ccc"></canvas>
+</body>
+
+<script>
+    window.onload=()=>{
+        drawExample();
+    }
+
+    function drawExample(){
+        let canvas = document.getElementById('k-canvas')
+        let context = canvas.getContext('2d')
+
+        context.fillStyle="#ff0000"
+        context.fillRect(10, 10, 100, 100)
+
+        context.strokeStyle="#0000ff"
+        context.strokeRect(30,30, 100, 100)
+
+        context.clearRect(50, 50, 80, 20)
+    }
+</script>
+</html>

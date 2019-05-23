@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="k-canvas" width ="300"height ="300">
+        Canvas 不受支持
+    </canvas>
+
+    <canvas id ="ex1" width ="500"height ="150"
+           style ="border: 1px solid #cccccc;"></canvas>
+</body>
+<style>
+#k-canvas {
+    border:  1px solid #ccc;
+}
+</style>
+
+<script>
+
+window.onload =function(){
+    drawText()
+}
+
+function drawText(){
+    let canvas = document.getElementById("k-canvas")
+    let context = canvas.getContext("2d")
+
+    context.fillStyle = "#ff0000";
+    context.fillRect(10, 10, 100, 100);
+}
+
+// // 1.等待页面完全加载。
+// window.onload = function(){
+//     drawText()
+// drawExamples();
+// }
+
+
+// function drawExamples(){
+// // 2.获取canvas元素的引用。
+// var canvas = document.getElementById("ex1");
+
+// // 3.从canvas元素获取2D上下文。
+// var context = canvas.getContext("2d");
+
+// // 4.绘制图形。
+// context.fillStyle ="#ff0000";
+// context.fillRect(10,10,100,100);
+// }
+
+</script>
+</html>

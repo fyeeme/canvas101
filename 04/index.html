@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="k-canvas" width="200" height="200" style="border: 1px solid #ccc"></canvas>
+</body>
+<script>
+    window.onload= ()=>{
+        let canvas = document.getElementById('k-canvas')
+        let context = canvas.getContext("2d")
+        // drawExample(context);
+        drawLineWidth(context)
+    }
+
+    function drawLineWidth(context){
+        var x = 50;
+        var y = 50;
+        var width  = 100;
+        var height = 100;
+
+        context.lineWidth = 5;
+        context.strokeRect(x, y, width, height);
+    }
+
+    function drawExample(context){
+
+        context.fillStyle="#ff0000"
+        context.fillRect(10, 10, 100, 100);
+
+        context.strokeStyle = '0000ff';
+        context.strokeRect(20, 20, 100, 100);
+    }
+</script>
+</html>
